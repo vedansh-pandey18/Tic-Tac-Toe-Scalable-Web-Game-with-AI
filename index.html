@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe – Scalable Web Game with AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="back">
+    <div class="main">
+        <div id="gamecontainer-wrapper">
+            <div class="gamecontainer" id="gamecontainer"></div>
+        </div>
+        <div class="gameinfo">
+            <h1 id="welcome">Welcome to Tic Tac Toe!</h1>
+           
+            <div class="mode-selector">
+                <label for="game-mode">Game Mode:</label>
+                <select id="game-mode" aria-label="Select game mode">
+                    <option value="pvp">Player vs Player</option>
+                    <option value="pvc">Player vs Computer</option>
+                </select>
+            </div>
+           
+            <div class="board-size-selector">
+                <label for="board-size">Board Size:</label>
+                <select id="board-size" aria-label="Select board size">
+                    <option value="3">3x3</option>
+                    <option value="4">4x4</option>
+                    <option value="5">5x5</option>
+                </select>
+            </div>
+           
+            <div class="difficulty-selector">
+                <label for="ai-difficulty">AI Difficulty:</label>
+                <select id="ai-difficulty" aria-label="Select AI difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <span id="difficulty-warning"></span>
+            </div>
+           
+            <div class="current">
+                <span id="current-player">Current Player: </span>
+                <span id="game-status"></span>
+                <button id="reset-button" aria-label="Reset game board">Reset</button>
+            </div>
+            <div class="player-info">
+                <h3 id="player1">Player 1</h3>
+                <input type="text" id="name1" placeholder="Enter name of Player 1" aria-label="Player 1 name">
+                <span id="player1-score">0</span>
+                <h3 id="player2">Player 2</h3>
+                <input type="text" id="name2" placeholder="Enter name of Player 2" aria-label="Player 2 name">
+                <span id="player2-score">0</span>
+            </div>
+            <button id="save" aria-label="Save player names and reset scores">Save</button>
+            <div id="winner-message"></div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
