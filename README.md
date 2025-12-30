@@ -3,7 +3,9 @@
 A modern, interactive **Tic Tac Toe web application** built using **HTML, CSS, and Vanilla JavaScript**, featuring dynamic board sizes, AI-powered gameplay, animated winning logic, persistent score tracking, and an elegant glassmorphism UI.
 
 ---
+# 🔗Live Demo: https://vedansh-pandey18.github.io/Tic-Tac-Toe-Scalable-Web-Game-with-AI/
 
+---
 ## 📌 Table of Contents
 
 - [✨ Features](#-features)
