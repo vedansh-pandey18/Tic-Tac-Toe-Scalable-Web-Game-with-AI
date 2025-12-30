@@ -4,6 +4,25 @@ A modern, interactive **Tic Tac Toe web application** built using **HTML, CSS, a
 
 ---
 
+## 📌 Table of Contents
+
+- [✨ Features](#-features)
+- [📸 Screenshots](#-screenshots)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📦 Installation](#-installation)
+- [🚀 Usage](#-usage)
+- [🎨 UI--ux-highlights](#-ui--ux-highlights)
+- [🧠 Game Logic Overview](#-game-logic-overview)
+- [💾 Persistent Storage](#-persistent-storage)
+- [🗂️ Project Structure](#️-project-structure)
+- [🔐 Accessibility & Quality](#-accessibility--quality)
+- [📚 What I Learned](#-what-i-learned)
+- [🚢 Deployment](#-deployment)
+- [📄 License](#-license)
+- [👨‍💻 Author](#-author)
+
+---
+
 ## ✨ Features
 
 ### 🎯 Core Features
@@ -16,22 +35,21 @@ A modern, interactive **Tic Tac Toe web application** built using **HTML, CSS, a
 - **Keyboard Accessibility** – Play using keyboard controls
 - **Sound Effects** – Move, win, draw, and UI sounds
 
----
-
-### 👤 Player Features
-- Enter custom player names
-- Track scores across multiple rounds
-- Visual move previews on hover
-- Smooth animations on moves and wins
-- Automatic board reset after each round
-
----
-
 ### 🤖 AI Features
-- **Easy Mode** – Random valid moves  
-- **Medium Mode** – Defensive and winning strategies  
-- **Hard Mode** – Minimax algorithm (3×3 only)  
-- Smart disabling of unsupported AI levels for larger boards
+- **Easy Mode** – Random valid moves
+- **Medium Mode** – Defensive and winning strategies
+- **Hard Mode** – Minimax algorithm (3×3 only)
+- Automatic handling of unsupported AI modes for larger boards
+
+---
+
+## 📸 Screenshots
+
+> Screenshots showing gameplay, winning states, and settings UI.
+
+![Main Game Board](screenshots/game-board.png)
+![Winning Line Animation](screenshots/win-line.png)
+![Game Settings & AI Modes](screenshots/ai-mode.png)
 
 ---
 
@@ -46,15 +64,15 @@ A modern, interactive **Tic Tac Toe web application** built using **HTML, CSS, a
 
 ### Audio
 - **HTML5 Audio API**
-- **Custom sound effects** for interactions
+- Custom sound effects for interactions
 
 ---
 
 ## 📦 Installation
 
 ### Prerequisites
-- **Any modern web browser** (Chrome, Edge, Firefox)
-- **No frameworks or server required**
+- Any modern web browser (Chrome, Edge, Firefox)
+- No frameworks or server required
 
 ### Steps
 ~~~bash
@@ -70,43 +88,39 @@ Open **`index.html`** directly in your browser.
 
 ### Getting Started
 1. Open the game in your browser
-2. Select:
-   - **Game Mode** (PvP / PvC)
-   - **Board Size** (3×3, 4×4, 5×5)
-   - **AI Difficulty** (if PvC)
-3. Enter player names and click **Save**
-4. Start playing immediately
-
----
+2. Select game mode (PvP / PvC)
+3. Choose board size and AI difficulty
+4. Enter player names
+5. Start playing immediately
 
 ### 🎮 Controls
 - **Mouse Click** – Place move
 - **Keyboard**
   - **Enter / Space** – Place move
   - **1–9 keys** – Quick input for 3×3 board
-- **Reset Button** – Reset scores and board
+- **Reset Button** – Reset board and scores
 
 ---
 
 ## 🎨 UI & UX Highlights
 
-- **Glassmorphism-inspired dark theme**
-- **Player-based neon color system** (X & O)
-- **Hover previews** for better decision-making
-- **Animated particle effects** on winning moves
-- **Responsive layout** for desktop and mobile
-- **Accessible UI** with ARIA roles
+- Glassmorphism-inspired dark theme
+- Player-based neon color system (X & O)
+- Hover previews for move placement
+- Smooth animations and transitions
+- Fully responsive layout
+- Accessible UI with keyboard support
 
 ---
 
 ## 🧠 Game Logic Overview
 
-- Centralized **gameState object** for clean state management
-- Scalable **win-detection logic** for N×N boards
-- **SVG-based calculation** of exact winning line positions
-- **Depth-based Minimax scoring** for optimal AI decisions
-- Automatic **draw detection**
-- **Event-driven UI updates**
+- Centralized game state management
+- Scalable win-detection logic for N×N boards
+- SVG-based calculation of exact winning line positions
+- Minimax algorithm with depth-based scoring
+- Automatic draw detection
+- Event-driven UI updates
 
 ---
 
@@ -115,10 +129,10 @@ Open **`index.html`** directly in your browser.
 Stored using **LocalStorage**:
 - Player names
 - Scores
-- Match history (last 10 games)
-- Game mode, board size, AI difficulty
+- Game mode and board size
+- AI difficulty level
 
-**State persists across page reloads.**
+State persists across page reloads.
 
 ---
 
@@ -126,60 +140,54 @@ Stored using **LocalStorage**:
 
 ~~~text
 tic-tac-toe/
+├── screenshots/
+│   ├── game-board.png
+│   ├── win-line.png
+│   ├── ai-mode.png
+│
 ├── index.html        # Main HTML structure
-├── style.css         # Styling, animations, UI themes
-├── script.js         # Game logic, AI, state handling
+├── style.css         # Styling and animations
+├── script.js         # Game logic and AI
 │
-├── gameball.wav      # Move sound
-├── click.wav         # Button click sound
-├── claps.mp3         # Win sound
-├── aww.mp3           # Draw sound
-├── little-bell.mp3   # UI feedback sound
+├── gameball.wav
+├── click.wav
+├── claps.mp3
+├── aww.mp3
+├── little-bell.mp3
 │
-└── README.md         # Project documentation
+└── README.md
 ~~~
 
 ---
 
 ## 🔐 Accessibility & Quality
 
-- **Keyboard navigable cells**
-- **Focus-visible styling**
-- **ARIA labels** for screen readers
-- **No external dependencies**
-- Clean separation of **logic and UI**
-
----
-
-## 📚 Key Engineering Highlights
-
-- Implemented **Minimax algorithm** for unbeatable AI
-- Designed **scalable winner-detection** for variable board sizes
-- Used **SVG overlays** for precise animated win indication
-- Built **state-driven UI rendering** without frameworks
-- Managed **persistent state** using browser storage
-- Ensured smooth UX with **animations and audio feedback**
+- Keyboard-navigable gameplay
+- Focus-visible UI elements
+- ARIA-friendly structure
+- No external dependencies
+- Clean separation of logic and UI
 
 ---
 
 ## 📚 What I Learned
 
-- Applying **game algorithms** in real UI-driven applications
-- Structuring **scalable JavaScript logic** without frameworks
-- Handling **animations and SVG rendering** dynamically
-- Improving **accessibility and keyboard usability**
-- Managing **application state and persistence** in frontend apps
+- Implementing game algorithms in UI-driven applications
+- Writing scalable JavaScript logic without frameworks
+- SVG rendering and animation handling
+- Improving accessibility and keyboard usability
+- Managing persistent state in frontend apps
 
 ---
 
 ## 🚢 Deployment
 
-This project can be deployed easily on:
+This project can be deployed on:
 - **GitHub Pages**
 - **Netlify**
 - **Vercel**
 
-Simply upload the static files and set **`index.html`** as the entry point.
+Upload the static files and set `index.html` as the entry point.
 
 ---
 
@@ -192,10 +200,4 @@ This project is licensed under the **MIT License**.
 ## 👨‍💻 Author
 
 **Vedansh Pandey**  
-Built with ❤️ to demonstrate **frontend engineering** and **algorithmic thinking**.
-
----
-
-📌 Note
-
-This project was built to explore scalable game logic, AI decision-making, and modern UI patterns using plain JavaScript without external frameworks.
+Built with ❤️ using modern frontend best practices.
